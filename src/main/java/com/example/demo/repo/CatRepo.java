@@ -1,6 +1,10 @@
-/*TODO
 package com.example.demo.repo;
 
-public class CatRepo {
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.UUID;
+
+public interface CatRepo extends JpaRepository<CatEntity, UUID> {
+
 }
-*/
