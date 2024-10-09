@@ -17,7 +17,7 @@ import java.util.UUID;
 public class CatService {
     private final CatRepo catRepo;
 
-    public Cat createCat(String name) throws Exception{
+    public Cat createCat(String name) {
         CatEntity catEntity = catRepo.save(new CatEntity(UUID.randomUUID(), name));
         return CatMapper.INSTANCE.toCat(catEntity);
     }
